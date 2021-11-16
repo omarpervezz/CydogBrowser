@@ -396,3 +396,9 @@ footer .font-weight-bold {
 		font-size: 12px;
 	}
 }
+.container {
+            width: auto;
+            height: auto;
+            background-color: #eeeeee;         
+            border-radius: 10px; 
+        }

@@ -14,12 +14,12 @@ A Lightweight, fast, and secure browser for the minimalist trying to get things 
 - [New 🚀: Cydog Toolkit for Safari](https://apps.apple.com/us/app/cydog-toolkit/id1564679714?mt=12)
 - [New 🚀: Cydog Toolkit for Chrome](https://chrome.google.com/webstore/detail/cydog-toolkit/ibhpnkdhocnpbfdbgdihikhapmigokdn?utm_source=chrome-ntp-icon)
 
-### Features
-
-![Cydog3](https://play-lh.googleusercontent.com/YwzVOVN-hRSlqEAvDo5lCJnAh5x0lbEbWIuVsHGm9BQD7rBJyEBkG5zBLou32CyZKA=w1366-h590)
-
 ### Description
 
-Cydog Browser makes it easier for you to accomplish your daily tasks. It also helps you get the information you need faster with a lightweight design meant to leave minimal internet footprint. If you are looking for a browser that gives you faster access to the things you need so you can be more productive, please give us a download.
+Cydog Browser is the most innovative mobile web browser on the internet. We consistently score high marks in fingerprinting protection and browser security. Our privacy methodology is unrivaled by even the biggest names in web browsing, including TOR Browser.
+
+Part of our design is about making the user a solution in their own privacy process instead of their own worst enemy. Clicks you make on our browser improve your privacy and this includes clicks you don't even think about as privacy-related. This is based on a concept call entropy utilized in all cryptographic algorithms. You, the user, creates globally random - but locally patterned - events with every click you make, defeating most ad-tracking systems on the planet. The best part: you don't even have to do anything because its automated. Part of our design is also to make security default and impossible to turn off. Our browser blocks all non-secure http connections and redirects, significantly lowing your risk for security related issues. Our design is also to be socially focused, organized, and simple. This browser is meant for minimalists who want automated features without all the hassle.
+
+Cydog is on watch, protecting your webspace, Webfarers. All you have to do to get back the joy of true internet exploration is download Cydog Browser today! #cydogisheretohelp
 
 This app has been approved by The Freedom Wrapper Project (TFWP). For more information, please visit: [thefreedomwrapperproject.com](https://thefreedomwrapperproject.com)

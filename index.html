@@ -8,19 +8,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Cydog Browser - Get Things Done Faster</title>
         <link rel="shortcut icon" type="image/jpg" href="image/logo.png"/>
-        <meta name="description" content="">
+        <meta name="description" content="This is the Cydog Browser website. It contains some brief information about our service, along with a collection of information on what we do and how we do it.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-itunes-app" content="app-id=1563014942">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+	
+	<link href="About/css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="css/normalize.css">
-				<link rel="stylesheet" media="screen" href="plugin/bootstrap/css/bootstrap.min.css">
-				<link rel="stylesheet" href="plugin/bootstrap/css/bootstrap-responsive.min.css">
-				<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
-				<!--[if IE 7]>
-					<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome-ie7.min.css">
-				<![endif]-->
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/popupmenu.css">
+	<link rel="stylesheet" media="screen" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="plugin/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <style>
@@ -31,20 +34,42 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-<br></br>
 <!--==========================================================================
      Header Unit (LOGO & Slogan)
     ==========================================================================-->
 <div class="row-fluid">
 	<div class="span12 slogan text-center">
-		<img class="logo" src="image/logo.png" alt="logo">
-		<h1>Cydog Browser<br></br><small>A light, fast, and secure browser.</small></h1>
+		<img class="logo" src="image/logoheader.png" alt="logo">
+		<h1><small>a light, fast, and secure browser</small></h1>
 		<br></br>
-		<a href="aboutus.html" style="color: #000000; text-decoration: none; font-family:changa;"><img src="image/aboutus.png" alt="About Us" width="35" height="35"> About</a>&nbsp; &nbsp;|&nbsp; &nbsp; 
-		<a href="cydogtests.html" style="color: #000000; text-decoration: none; font-family:changa;"><img src="Tests/cydogtests.png" alt="Cydog Tests" width="31" height="35"> Cydog Tests<img src="image/new.png" alt="" width="31" height="35"></a>
+		<div class="container">
+ 	<h1 font-family="changa" style="padding: 15px; background-color:#d9d9d9">
+    		<a href="#menu">MENU</a>
+ 	</h1>    
+	<div class="popover" id="menu">
+ 		<div class = 'content'>
+  		  <a href="#" class="close"></a>
+   		<div class = 'nav'>
+    		  <ul class = 'nav_list'> 
+      		    <div class = 'nav_list_item'>
+	  		<li><a href="aboutus.html">About Us</a></li>
+      		    </div>
+     		    <div class = 'nav_list_item'>
+			<li><a href="cydogtests.html">Cydog Tests</a></li>
+      		    </div>
+    		    <div class = 'nav_list_item'>
+	  		<li><a href="cydogintensifies.html">Cydog Intensifies</a></li>
+      		    </div>
+    		    <div class = 'nav_list_item'>
+	  		<li><a href="ourplatforms.html">Our Platforms</a></li>
+      		    </div>
+     		 </ul>
+ 		</div>
+ 	       </div>
+ 	      </div>
+        </div>
 	</div>
 </div>
-
 <!--==========================================================================
 			Information Unit
 				-In these (two) information balloons you have to tell (in a simple way)
@@ -78,7 +103,7 @@
 	<div class="span4 info-container right">
 		<div class="hero-unit info">
   		<h2>The Cydog Difference</h2>
-  		<p>Many mobile browsers are not very efficient and not very fun. Cydog's purpose is to be everything mobile browsing is not.</p>
+  		<p>Many mobile browsers are not very efficient for the end user. Cydog's purpose is to be everything desktop and mobile browsing is not in ways that complement security and privacy instead of hampering it.</p>
 		</div>
 	</div>
 	
@@ -156,36 +181,12 @@
 <!--==========================================================================
      Social Network Unit
     ==========================================================================-->
-
-<div class="row-fluid">
+<section style="background-color:#eeeeee;">
+<div class="row-fluid" style="background-color:#eeeeee;">
 	<div class="span12 text-center" style="margin-top:5%;">
 			<a class="social" href="https://github.com/mdbench/CydogBrowser"><i><img src="image/cydogrepository.png" alt="Cydog GitHub Repository" width="37" height="43"></img></i></a>
 			<a class="social" href="https://www.pinterest.com/mdbench/cydog-browser/"><i><img src="image/pinterest-badge.png" alt="Cydog Pinterest Board" width="40" height="43"></img></i></a>
 			<a class="social" href="https://cydogbrowser.com/cydogtests"><i><img src="Tests/cydogtests.png" alt="Cydog Tests" width="40" height="43"></img></i></a>
-	</div>
-</div>
-
-<!--==========================================================================
-     Other Badges & Information
-    ==========================================================================-->
-
-<div class="row-fluid">
-	<div class="span12 text-center" style="margin-top:5%;">
-			<a class="social" href="https://chrome.google.com/webstore/detail/cydog-toolkit/ibhpnkdhocnpbfdbgdihikhapmigokdn"><i><img src="image/chrome-web-store.png" alt="Cydog Chrome Extension" width="200" height="60"></img></i></a>
-			<a class="social" href="https://apps.apple.com/us/app/cydog-browser/id1563014942"><i><img src="image/apple-macbook-store-badge.png" alt="Cydog for MacBook" width="200" height="51"></img></i></a>
-	</div>
-</div>
-
-<!--==========================================================================
-     New Content - Features, Graphics, and Other Non-Relevant Content as part of an infinite scroll.
-    ==========================================================================-->
-
-
-<div class="row-fluid">
-	<div class="span12 text-center" style="margin-top:5%;">
-			 <video width="270" poster="videos/videographic.png" controls>
-                <source src="videos/iPadPromo.MOV" type="video/mp4">
-            </video>
 	</div>
 </div>
 
@@ -197,20 +198,13 @@
 	<div class="row-fluid footer">
 		<div class="span12">
 		    <p class="copyright text-center" style="color: black;">
-		    <a href="https://github.com/mdbench/CydogBrowser/tree/gh-pages/Wallpapers" style="color: black;">Wallpapers</a>  |  
-		    <a href="https://addons.mozilla.org/en-US/firefox/addon/cydog-toolkit/" style="color: black;">Firefox Extension</a>  |  
-		    <a href="https://apps.apple.com/us/app/cydog-toolkit/id1564679714?mt=12" style="color: black;">Safari Extension</a>  |  
-		    Themes (<a href="https://chrome.google.com/webstore/detail/cydog-emperor/dgcieiecgkcbepgnfbdbageaijlejjlo" style="color: black;">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/cydog-emperor/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" style="color:black;">Firefox</a>)  
-		    <br></br>
-		    <img src="image/bottombanner.png" alt="Bottom Banner"></img>
 		    <p class="copyright text-right"><a href="termsandconditions.html" style="color: black;">Terms & Conditions</a></p>
 		    <p class="copyright text-right"><a href="privacypolicy.html" style="color: black;">Privacy Policy</a></p>
-			<p class="copyright text-right" style="color:black;"><strong>© 2020</strong></p>
+		    <p class="copyright text-right" style="color:black;"><strong>Copyright 2020</strong></p>
 		</div>
 	</div>
-	<br></br>
-	<br></br>
 </footer>
+</section>
 </body>
 <!-- Global site tag (gtag.js) - Google Ads: 388672880 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-388672880"></script>
