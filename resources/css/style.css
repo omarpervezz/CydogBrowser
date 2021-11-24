@@ -1389,123 +1389,117 @@ start cydog search  page css
 */
 
 #search_engine {
-	padding: 26rem 0 22rem 0 !important;
-	text-align: center;
+    background: linear-gradient(rgba(30, 47, 231, 0.555), rgba(35, 99, 217, 0.637)) 0% 0% / cover, url("http://i.hizliresim.com/v4Qykv.png") center center no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    padding: 12rem 0 0rem !important;
+    text-align: center;
+    font-family: changa;
+    position: relative;
 }
-
+#search_engine .logo_bg_search {
+    position: absolute;
+    width: 40rem;
+    opacity: 0.3;
+    top: 2%;
+    right: 1%;
+}
 #search_engine .cydogbrowser_intensifies_img {
-	margin-bottom: 2rem;
-	width: 17rem;
-	max-width: 100%;
+    margin-bottom: 2rem;
+    width: 17rem;
+    max-width: 100%;
 }
-
 #search_engine .searchInt {
-	background: transparent;
-	width: 43% !important;
-	flex: none !important;
-	border: 0;
-	border-radius: 0px;
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-bottom-left-radius: 10px;
-	border-top: 1px solid rgb(255, 255, 255);
-	border-top-left-radius: 10px;
-	box-shadow: 0px 5px 2px rgb(31, 31, 31);
-	transition: width 1s;
-	font-size: 1.6rem;
+    background: 0 0;
+    width: 43% !important;
+    flex: none !important;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid #fff;
+    border-top-left-radius: 10px;
+    box-shadow: 0 5px 2px #1f1f1f;
+    transition: width 1s;
+    font-size: 1.6rem;
+    color: #fff;
 }
-
 #search_engine .searchInt::placeholder {
-	color: white;
+    color: #fff;
 }
-
 #search_engine .searchBtn {
-	box-shadow: 0px 5px 2px rgb(31, 31, 31);
-	z-index: 2;
-	border: 0;
-	border-top: 1px solid rgb(255, 255, 255);
-	border-top-left-radius: 10px;
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-radius: 0px;
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
+    box-shadow: 0 5px 2px #1f1f1f;
+    z-index: 2;
+    border: 0;
+    border-top: 1px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
-
 #search_engine .fa-search {
-	transform: rotateY(180deg);
-	font-size: 1.7rem;
-	color: white;
+    transform: rotateY(180deg);
+    font-size: 1.7rem;
+    color: #fff;
 }
-
 #search_engine .loadSpan1 {
-	font-size: 2rem;
-	font-family: 'changa', sans-serif;
-	color: #0e0d0e;
+    font-size: 2rem;
+    font-family: changa, sans-serif;
+    color: #0e0d0e;
 }
-
 #search_engine .loadSpan2 {
-	font-size: 2rem;
-	font-family: 'changa', sans-serif;
-	color: #0e0d0e;
+    font-size: 2rem;
+    font-family: changa, sans-serif;
+    color: #0e0d0e;
 }
-
 #search_engine .loadSpan3 {
-	font-size: 2rem;
-	font-family: 'changa', sans-serif;
-	color: #141516;
+    font-size: 2rem;
+    font-family: changa, sans-serif;
+    color: #141516;
 }
-
 #search_engine .searchInt:focus {
-	color: white;
-	background: transparent;
-	width: 80% !important;
-	border-bottom: 1px solid rgb(255, 255, 255);
-	box-shadow: 0px 5px 2px rgb(31, 31, 31);
+    color: #fff;
+    background: 0 0;
+    width: 80% !important;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 5px 2px #1f1f1f;
 }
-
 #search_engine .loadImg {
-	width: 3rem;
+    width: 3rem;
 }
-
 #search_engine .loading {
-	display: none;
+    display: none;
 }
-
 #search_engine .default_search .new_img {
-	width: 4rem;
+    width: 4rem;
 }
-
 #search_engine .default_search a {
-	color: #fff;
-	font-size: 1.7rem;
-	display: inline-block;
-	margin-top: 3rem;
+    color: #fff;
+    font-size: 1.7rem;
+    display: inline-block;
+    margin-top: 3rem;
+    font-family: changa;
+    font-weight: 500;
 }
-
-@media screen and (max-width:768px) {
-	#search_engine .searchInt {
-		width: 50% !important;
-	}
+@media screen and (max-width: 768px) {
+    #search_engine .searchInt {
+        width: 50% !important;
+    }
 }
-
-@media screen and (max-width:576px) {
-	#search_engine {
-		padding: 17rem 0 5rem 0 !important;
-	}
-}
-
-@media screen and (max-width:320px) {
-	#search_engine {
-		padding: 15rem 0 5rem 0 !important;
-	}
-	#search_engine .searchInt {
-		font-size: .8rem;
-	}
-	#search_engine .searchBtn {
-		height: 2.2rem;
-	}
-	#search_engine .fa-search {
-		font-size: .7rem;
-	}
+@media screen and (max-width: 320px) {
+    #search_engine {
+        padding: 15rem 0 5rem !important;
+    }
+    #search_engine .searchInt {
+        font-size: 0.8rem;
+    }
+    #search_engine .searchBtn {
+        height: 2.2rem;
+    }
+    #search_engine .fa-search {
+        font-size: 0.7rem;
+    }
 }
 
 
