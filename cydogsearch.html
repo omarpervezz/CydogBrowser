@@ -1,66 +1,58 @@
-<!--
-    CydogIntensifies.html
-    Author: Matthew Benchimol
-    Author URI: https://matthewbenchimol.com/
-    Author Github URI: https://www.github.com/mdbench
-    Project Repository URI: https://github.com/mdbench/cydogbrowser
-    Description: This is an aggregated, random search engine. It is used in the Intensifies feature available on Cydog Browser for Android and iOS. It was ported to a website in order to increase adoption without limiting those who do not use the Cydog Browser platform. The goal with this search bar is to bring innovation to the search space through open source, non-commericial means.
-    License: CC BY-NC-SA 4.0
- -->
 
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="This is a randomized search engine. It helps you get a better distribution of search results and reduce your meta data. No one wants all their search queries in the hands of one single provider, especially the privacy conscious.">
-      <meta name="author" content="">
-      <link rel="shortcut icon" type="image/jpg" href="resources/img/logo.png" />
-      <meta name="apple-itunes-app" content="app-id=1563014942">
-      <title>Cydog Search</title>
-      <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-      <link href="vendors/css/bootstrap.css" rel="stylesheet">
-      <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css.map">
-      <link rel="stylesheet" href="vendor/normalize/Normalize.css">
-      <link rel="stylesheet" href="resources/css/style.css">
-   </head>
-   <body style="background-color:#2663d1; color:#101010;" onbeforecopy="return false" ondragstart="return false" onselectstart="return false" oncontextmenu="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onload="qurySearch()">
-      <main>
-         <section id="search_engine">
-            <div class="container">
-               <div class="row">
-                  <div class="col-12 text-center">
-                     <img src="./resources/img/cydogbrowserintensifies.png" alt="cydogbrowserintensifies" class="img-fluid cydogbrowser_intensifies_img">
-                  </div>
-                  <div class="col-12">
-                     <form role="form" id="form-buscar" method="GET" action="javascript:randomlink(document.getElementById('1').value)">
-                        <div class="input-group mb-3 main">
-                           <div class="mx-auto row col-12">
-                              <input id="1" type="text" class="form-control py-2 searchInt ml-auto" placeholder="Search..." aria-label="Recipient's
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="This is a randomized search engine. It helps you get a better distribution of search results and reduce your meta data. No one wants all their search queries in the hands of one single provider, especially the privacy conscious.">
+<meta name="author" content="">
+<link rel="shortcut icon" type="image/jpg" href="resources/img/logo.png" />
+<meta name="apple-itunes-app" content="app-id=1563014942">
+<title>Cydog Search</title>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+<link href="vendors/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css.map">
+<link rel="stylesheet" href="vendor/normalize/Normalize.css">
+<link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body style="color:#101010;" onbeforecopy="return false" ondragstart="return false" onselectstart="return false" oncontextmenu="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onload="qurySearch()">
+<main>
+<section id="search_engine">
+<img src="./resources/img/graphics.png" alt="logo" class="img-fluid logo_bg_search">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<img src="./resources/img/cydogbrowserintensifies.png" alt="cydogbrowserintensifies" class="img-fluid cydogbrowser_intensifies_img">
+</div>
+<div class="col-12">
+<form role="form" id="form-buscar" method="GET" action="javascript:randomlink(document.getElementById('1').value)">
+<div class="input-group mb-3 main">
+<div class="mx-auto row col-12">
+<input id="1" type="text" class="form-control py-2 searchInt ml-auto" placeholder="Search..." aria-label="Recipient's
                                  username" aria-describedby="basic-addon2" required>
-                              <div class="input-group-append mr-auto">
-                                 <button type="submit" class="btn btn-outline-secondary searchBtn" type="button"><i class="fas fa-search"></i></button>
-                              </div>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col-12 text-center loading">
-                     <span class="loadSpan1">Cy<span class="loadSpan2">dog </span><span class="loadSpan3">Loading</span></span>
-                     <img class="loadImg" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif" alt="">
-                  </div>
-                  <div class="col-12">
-                     <div class="default_search">
-                        <p><a href="cydogsearchsetup.html"><img src="./resources/img/new.png" alt="new" class="new_img">set Cydog Intensifies as your default search</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </main>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="vendors/js/bootstrap.min.js"></script>
-      <script>
+<div class="input-group-append mr-auto">
+<button type="submit" class="btn btn-outline-secondary searchBtn" type="button"><i class="fas fa-search"></i></button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="col-12 text-center loading">
+<span class="loadSpan1">Cy<span class="loadSpan2">dog </span><span class="loadSpan3">Loading</span></span>
+<img class="loadImg" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif" alt="">
+</div>
+<div class="col-12">
+<div class="default_search">
+<p><a href="cydogsearchsetup.html"><img src="./resources/img/new.png" alt="new" class="new_img">set Cydog Intensifies as your default search</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="vendors/js/bootstrap.min.js"></script>
+<script>
          var randomlinks=new Array()
          randomlinks[0]="https://duckduckgo.com/?q="
          randomlinks[1]="https://search.brave.com/search?q="
@@ -76,5 +68,5 @@
          randomlink(paramList[paramList.length-1])}}
          $('input').focusin(function(){$('.loading').css('display','block');});$('input').focusout(function(){$('.loading').css('display','none');});
       </script>
-   </body>
+</body>
 </html>
