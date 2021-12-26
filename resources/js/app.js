@@ -105,3 +105,35 @@ $('input').focusin(function () {
 $('input').focusout(function () {
 	$('.loading').css('display', 'none');
 });
+
+
+//random cyber images
+window.addEventListener(`load`, () => {
+    document.getElementById(`dice1`).src = `./resources/img/news${getRandomInt(3, 2)}.png`;
+    rollCount++;
+});
+window.addEventListener(`load`, () => {
+    document.getElementById(`dice2`).src = `./resources/img/news${getRandomInt(1, 2)}.png`;
+    rollCount++;
+});
+window.addEventListener(`load`, () => {
+    document.getElementById(`dice3`).src = `./resources/img/news${getRandomInt(3, 1)}.png`;
+    rollCount++;
+});
+function getRandomInt(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 4));
+}
+
+function newsRandom(){
+	
+	var cards = $(".feed-item-title a");
+	for (var i = 0; i < cards.length; i++) {
+	  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+	  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+	  cards.eq(target1).before(cards.eq(target2));
+	};
+}
+
+window.addEventListener('load', function(){
+	newsRandom();
+})

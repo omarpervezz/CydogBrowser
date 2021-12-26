@@ -1,370 +1,385 @@
 <!--
-     CydogIntensifies.html
-     Original Author: Matthew Benchimol
-     Original Author URI: https://matthewbenchimol.com/
-     Original Author Github URI: https://www.github.com/mdbench
-     Contributing Authors: Omar Pervez
-     Contributing Author URIs:
-     Contributing Author Github URIs: https://github.com/omarpervezz
-     Project Repository URI: https://github.com/mdbench/cydogbrowser
-     Description: This is an aggregated, random search engine. It is used in the Intensifies feature available on Cydog Browser for Android and iOS. It was ported to a website in order to increase adoption without limiting those who do not use the Cydog Browser platform. The goal with this search bar is to bring innovation to the search space through open source, non-commericial means.
-     License: CC BY-NC-SA 4.0
-  -->
+   CydogIntensifies.html
+   Original Author: Matthew Benchimol
+   Original Author URI: https://matthewbenchimol.com/
+   Original Author Github URI: https://www.github.com/mdbench
+   Contributing Authors: Omar Pervez
+   Contributing Author URIs:
+   Contributing Author Github URIs: https://github.com/omarpervezz
+   Project Repository URI: https://github.com/mdbench/cydogbrowser
+   Description: This is an aggregated, random search engine. It is used in the Intensifies feature available on Cydog Browser for Android and iOS. It was ported to a website in order to increase adoption without limiting those who do not use the Cydog Browser platform. The goal with this search bar is to bring innovation to the search space through open source, non-commericial means.
+   License: CC BY-NC-SA 4.0
+   -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="This is a randomized search engine. It helps you get a better distribution of search results and reduce your meta data. No one wants all their search queries in the hands of one single provider, especially the privacy conscious.">
-<meta name="author" content="">
-<link rel="shortcut icon" type="image/jpg" href="resources/img/logo.png" />
-<meta name="apple-itunes-app" content="app-id=1563014942">
-<title>Cydog Search</title>
-<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-<link href="vendors/css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css.map">
-<link rel="stylesheet" href="vendor/normalize/Normalize.css">
-<link rel="stylesheet" href="resources/css/style.css">
-<script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is a randomized search engine. It helps you get a better distribution of search results and reduce your meta data. No one wants all their search queries in the hands of one single provider, especially the privacy conscious.">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/jpg" href="resources/img/logo.png" />
+    <meta name="apple-itunes-app" content="app-id=1563014942">
+    <title>Cydog Search</title>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link href="vendors/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="vendor/normalize/Normalize.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script>
         function myFunction(val, event) {
-        var inp = document.createElement('input');
-        document.body.appendChild(inp)
-        inp.value = val;
-        inp.select();
-        document.execCommand('copy', false);
-        inp.remove();
-        alert("Copied");
+            var inp = document.createElement('input');
+            document.body.appendChild(inp)
+            inp.value = val;
+            inp.select();
+            document.execCommand('copy', false);
+            inp.remove();
+            alert("Copied");
         }
     </script>
-<style>
-    .modal {
-  text-align: center;
-  padding: 0!important;
-}
-.modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
-}
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
-.text-typing {
-    }
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .text-typing p {
-      margin:0px;
-      white-space:nowrap;
-      overflow:hidden;
-      animation:typing 2s steps(22,end) forwards,
-                blink 0s;
-                font-size: 20px;
-    }
-    @keyframes typing {
-      0% { width:0% }
-      100% { width:100% }
-    }
-    @keyframes blink {
-      0%,100% {
-        border-right:2px solid transparent;
-      }
-      50% {
-        border-right:2px solid #222;
-      }
-    }
-</style>    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 700px;
+        }
+        
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .modal {
+            text-align: center;
+            padding: 0!important;
+        }
+        
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+        
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+        
+        .text-typing {}
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .text-typing p {
+            margin: 0px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(22, end) forwards, blink 0s;
+            font-size: 20px;
+        }
+        
+        @keyframes typing {
+            0% {
+                width: 0%
+            }
+            100% {
+                width: 100%
+            }
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                border-right: 2px solid transparent;
+            }
+            50% {
+                border-right: 2px solid #222;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FX655ZX00F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FX655ZX00F');
+    </script>
 </head>
+
 <body style="color:#101010;" onload="qurySearch()">
     <noscript>
-         <style>body{display:none;}</style>
-         <meta http-equiv="refresh" content="”></meta>
-    </noscript>     
-<main>
-<section id="search_engine">
-<div class="container" style="background-color:#2d2d2d; border-radius: 10px; padding: 20px;width: auto; height: auto; box-shadow: 5px 5px 5px black;">
-<div class="row">
-<div class="col-12 text-center">
-<img src="./resources/img/cydogbrowsersearch.png" alt="cydogbrowserintensifies" class="img-fluid cydogbrowser_intensifies_img">
-</div>
-<div class="col-12">
-<form role="form" id="form-buscar" method="GET" action="javascript:randomlink(document.getElementById('1').value)">
-<div class="input-group mb-3 main">
-<div class="mx-auto row col-12">
-<input id="1" type="text" class="form-control py-2 searchInt ml-auto" placeholder="Search..." aria-label="Recipient's
-                                 username" aria-describedby="basic-addon2" required>
-<div class="input-group-append mr-auto">
-<button type="submit" class="btn btn-outline-secondary searchBtn" type="button"><i class="fas fa-search"></i></button>
-</div>
-</div>
-</div>
-</form>
-</div>
-<div class="col-12 text-center loading">
-
-</div>
-<div class="col-12">
-<div class="text-typing">
-    <center>
-    <p>Hello, Webfarer!</p>
-    </center>
-</div> 
-<br></br>
-<div class="default_search">
-<p><img src="./resources/img/new.png" alt="new" class="new_img modal_img" data-toggle="modal" data-target="#myModal"><a style="color:white;" data-toggle="modal" data-target="#myModal">set Cydog Intensifies as your default search</a></p>
-</div>
-</div>
-</div>
-</div>
-<a href="#myModal2">
-<img src="./resources/img/gettestedbig.png" style="float: right;margin-right:5%; margin-top:5%;" alt="logo" class="img-fluid" data-toggle="modal" height="150dp" width="150dp" data-target="#myModal2"></a>
-<script>
-        var times=history.length;
-        var up=navigator.onLine;
-        if (up == true){ var up="Yes";
-            document.write('<h3 style="float: right;margin-right:5%; margin-top:5%;">Internet is Working: <strong style="color: #15ff11;"> '+up+' </strong></h3>');
-        } else {var up="No"
-            document.write('<h3>Internet is Working: <strong style="color: #d2c700;"> '+up+' </strong></h3>');
-        }
-</script>
-<button onclick="enableScroll()" style="background-color:transparent;padding: 0;border: none;outline: none;"><img class="img-fluid" src="./resources/img/questions.png" style="float: left;margin-top:20%" alt="logo" height="75dp" width="75dp"></button>
-</section>
-</main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="vendors/js/bootstrap.min.js"></script>
-<script>
-    /*Random link button- By JavaScript Kit (http://javascriptkit.com) Over 300+ free scripts! This credit MUST stay intact for use*/
-  -->
-         var randomlinks=new Array()
-         randomlinks[0]="https://duckduckgo.com/?q="
-         randomlinks[1]="https://search.brave.com/search?q="
-         randomlinks[2]="https://dogpile.com/serp?q="
-         randomlinks[3]="https://google.com/search?q="
-         randomlinks[4]="https://search.yahoo.com/search?p="
-         randomlinks[5]="https://bing.com/search?q="
-         randomlinks[6]="https://www.ecosia.org/search?q="
-         randomlinks[7]="https://www.startpage.com/do/dsearch?query="
-         function randomlink(link){window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]+link;}
-         function qurySearch(){const query=window.location.search
-         if(query&&query.includes("?q=")){const paramList=query.split("?q=");if(paramList[paramList.length-1]!=="")
-         randomlink(paramList[paramList.length-1])}}
-         $('input').focusin(function(){$('.loading').css('display','block');});$('input').focusout(function(){$('.loading').css('display','none');});
-      </script>
-      
- <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
-                  <div class="modal-dialog" role="document" style="background-color:#2d2d2d;">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h1 class="header_title text-center">Make Cydog Search your Default</h1>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <img src="./resources/img/close.png" width="25px" height="25px">
-                           </button>
-                        </div>
-                        <div class="modal-body" style="background-color:#2d2d2d; font-family:Arial;">
-                           <div class="row">
-                              <div class="col-12 text-left">
-                               <div class="row">
-                                    <div class="col-12">
-                                       <h3>¹Go to Settings/Preferences</h3>
-                                       <h3>²Go to Search Engine</h3>
-                                       <h3>³Add Manually</h3>
-                                       <h3>⁴<a onclick="myFunction('https://cydogbrowser.com/cydogintensifies?q=%s')" style="color:white;">Paste Link: <br></br>https://cydogbrowser.com/cydogintensifies?q=%s</a></h3>
-                                       <p>^click link to copy it easily!</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           </p>
-                        </div>
-                        <br></br>
-                        <div class="modal-footer">
-                           <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>      
-               
-               <div class="modal fade show" id="myModal2" tabindex="-1" role="dialog">
-                  <div class="modal-dialog" role="document" style="background-color:#2d2d2d;">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h1 class="header_title text-center">Here are Some Quick Tests</h1>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <img src="./resources/img/close.png" width="25px" height="25px">
-                           </button>
-                        </div>
-                        <div class="modal-body" style="background-color:#2d2d2d; font-family:Arial;">
-                           <div class="row">
-                              <div class="col-12 text-left">
-                               <div class="row">
-                                    <div class="col-12">
-                                        <br></br>
-                                        <form name="output" readonly="readonly" word-wrap="break-word;">
-               <table border="0" style="background-color:#2d2d2d;font-family: Arial">
-                                       <tr>
-                     <td style="color:#ffffff; font-size:15sp;"><h3 style="font-family:Arial;">Adblock: </h3></td>
-                     <td><h3 style="font-family:Arial;"><input name="adblock" TYPE="text" readonly="readonly" style="color:#000000;"></h3></td>
-                  </tr>
-                  <tr>
-                     <td style="color:#ffffff; font-size:15sp;"><h3 style="font-family:Arial;">Cookies: </h3></td>
-                     <td><h3 style="font-family:Arial;"><input name="cookie" TYPE="text" readonly="readonly" style="color:#000000;"></h3></td>
-                  </tr>
-                  </table>
-            </form>
-            <br></br>
-            <script>document.write("<h3 style='color:#ffffff; font-family:Arial;'>User Agent:<br></br>"+navigator.userAgent+"</h3>")</script>
-            <br></br>
-            <a href="ourplatforms.html"><h4 style="font-family:Arial;">Try Our Browser Extensions Available in the Platforms Page!</h4></a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           </p>
-                        </div>
-                        <br></br>
-                        <div class="modal-footer">
-                           <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>   
-    <script>
-    // Credits: https://jonathanmh.com/how-to-detect-ad-blockers-adblock-ublock-etc/
-    window.addEventListener("load", function () {
-        let testReq = new Request(
-        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-        {
-        method: "HEAD",
-        mode: "no-cors"
-                 }
-            );
-                
-        fetch(testReq).then(response => {
-            document.output.adblock.value = " Not detected";
-            }).catch(error => {
-            document.output.adblock.value = " Detected";
-        });
-    });
-    </script>
-    <script>
-               if (navigator.cookieEnabled) {
-                   document.output.cookie.value = " Cookies enabled";
-               } else 
-               {
-                   document.output.cookie.value = " Cookies not enabled";
-               }
-    </script>
-    <script>document.body.style.overflow = 'hidden';</script>
-    <script>
-    function enableScroll() {
-    document.body.style.overflow = 'visible';
-    document.getElementById('aboutcydogsearch').scrollIntoView();
-        }
-    </script>
-    <script>
-    function disableScroll() {
-    document.body.style.overflow = 'hidden';
-    document.getElementById('search_engine').scrollIntoView();
-        }
-    </script>
-    <!--------- HOW OUR SEARCH WORKS ------------>
-         <section id="aboutcydogsearch">
+                  <style>body{display:none;}</style>
+                  <meta http-equiv="refresh" content="">
+                  </meta>
+               </noscript>
+    <main>
+        <section id="search_engine">
+            <img src="./resources/img/questions.png" alt="question" class="img-fluid question_img" data-toggle="modal" data-target="#myModal2">
             <div class="container">
-               <div class="row">
-                  <div class="col-12">
-                      <br></br>
-                      <br></br>
-                     <h2 class="mb-3">How does Cydog Search Work?</h2>
-                  </div>
-               </div>
-               <div class="row mt-0 mt-md-5 pt-0 pt-md-4">
-                  <div class="col-12">
-                     <div class="row">
-                        <div class="col-md-4">
-                           <img src="./resources/img/searchgraphic1.png" alt="android-1" class="img-fluid">
-                           <div class="row">
-                              <div class="col-12">
-                                 <div class="advancded_short_info">
-                                    <h2>What?
-                                    </h2>
-                                    <h1>Privacy-focused and non-privacy search engines can track your search queries. You are banking on their integrity, as they have agreed not to compromise your data. We believe trust is essential but putting all that data in the hands of one company isn't smart. Where they prefer the cloud, we prefer local. Where they prefer centralized, we prefer decentralized.</h1>
-                                 </div>
-                              </div>
-                           </div>
+                <div class="row main_search_info">
+                    <div class="col-12 text-center">
+                        <img src="./resources/img/cydogbrowsersearch.png" alt="cydogbrowserintensifies" class="img-fluid cydogbrowser_intensifies_img">
+                    </div>
+                    <div class="col-12">
+                        <form role="form" id="form-buscar" method="GET" action="javascript:randomlink(document.getElementById('1').value)">
+                            <div class="input-group mb-3 main">
+                                <div class="mx-auto row col-12">
+                                    <input id="1" type="text" class="form-control py-2 searchInt ml-auto" placeholder="Search..." aria-label="Recipient's
+                                          username" aria-describedby="basic-addon2" required>
+                                    <div class="input-group-append mr-auto">
+                                        <button type="submit" class="btn btn-outline-secondary searchBtn" type="button"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 text-center loading">
+                    </div>
+                    <div class="col-12">
+                        <div class="text-typing">
+                            <center>
+                                <p>Hello, Webfarer!</p>
+                            </center>
                         </div>
-                        <div class="col-md-4">
-                           <img src="./resources/img/searchgraphic2.png" alt="android-2" class="img-fluid">
-                           <div class="advancded_short_info">
-                              <h2>Why?
-                              </h2>
-                              <h1>We can't collect your data even if we wanted to. Cydog Search randomizes your queries and sends them to search engines that already exist. While our competitors sustain their money flow, we focus on innovation in the hopes you will pay for higher quality products when we monetize services in the future.</h1>
-                           </div>
+                        <br></br>
+                        <div class="default_search">
+                            <p><img src="./resources/img/new.png" alt="new" class="new_img modal_img" data-toggle="modal" data-target="#myModal"><a style="color:white;" data-toggle="modal" data-target="#myModal1">set Cydog Intensifies as your default search</a></p>
                         </div>
-                        <div class="col-md-4">
-                           <img src="./resources/img/searchgraphic3.png" alt="android-3" class="img-fluid">
-                           <div class="advancded_short_info">
-                              <h2>Who?
-                              </h2>
-                              <h1>We focus on making your life easier. Our Search contains quick analytics so you can get information before you browse. We hope this empowers you.</h1>
-                           </div>
-                           <br></br>
-                           <center><button onclick="disableScroll()" style="background-color:transparent;padding: 0;border: none;outline: none;"><img src="./resources/img/closeexplanation.png" alt="logo" height="100dp" width="auto"></button></center>
+                    </div>
+                </div>
+            </div>
+            <h3 class="inter-working_info"><strong></strong></h3>
+            <img src="./resources/img/gettestedbig.png" alt="logo" class="img-fluid tested_img" data-toggle="modal" data-target="#myModal3">
+        </section>
+        <div class="modal modal_common fade show" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document" style="background-color:#2d2d2d; max-width: 100%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="header_title text-center">Make Cydog Search your Default</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <img src="./resources/img/close.png" class="img-fluid close_icon">
+                              </button>
+                    </div>
+                    <div class="modal-body" style="background-color:#2d2d2d; font-family:Arial;">
+                        <div class="row">
+                            <div class="col-12 text-left">
+                                <div class="row">
+                                    <div class="col-12 search_info_default">
+                                        <h3>1. Go to Settings/Preferences</h3>
+                                        <h3>2. Go to Search Engine</h3>
+                                        <h3>3. Add Manually</h3>
+                                        <h3>4. <a onclick="myFunction('https://cydogbrowser.com/cydogintensifies?q=%s')" style="color:white;">Paste Link: <br><br>https://cydogbrowser.com/cydogintensifies?q=%s</a></h3>
+                                        <p>^click link to copy it easily!</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-            <br></br>
-         </section>
-         <!--------- ABOUT CYDOG SEARCH ------------>
-  <!---CYDOG FOOTER  -->
-      <footer>
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-6 d-flex justify-content-md-start justify-content-center">
-                  <div class="social_media">
-                     <ul>
-                        <li>Follow us</li>
-                        <li><a href="https://github.com/mdbench/CydogBrowser"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://www.pinterest.com/mdbench/cydog-browser/"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/cydog-browser"><i class="fa fa-linkedin"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
+        </div>
+        <div class="modal modal_common fade show" id="myModal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document" style="background-color:#2d2d2d;max-width: 100%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <img src="./resources/img/close.png" class="img-fluid close_icon">
+                              </button>
+                    </div>
+                    <div class="modal-body">
+                        <section id="aboutcydogsearch">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <h2>How does Cydog Search Work?</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-4 text-center">
+                                                <img src="./resources/img/searchgraphic1.png" alt="android-1" class="img-fluid">
+                                                <div class="row">
+                                                    <div class="col-12 text-center">
+                                                        <div class="advancded_short_info">
+                                                            <h3>What?
+                                                            </h3>
+                                                            <p class="text-justify">Privacy-focused and non-privacy search engines can track your search queries. You are banking on their integrity, as they have agreed not to compromise your data. We believe trust is essential
+                                                                but putting all that data in the hands of one company isn't smart. Where they prefer the cloud, we prefer local. Where they prefer centralized, we prefer decentralized.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 text-center">
+                                                <img src="./resources/img/searchgraphic2.png" alt="android-2" class="img-fluid">
+                                                <div class="advancded_short_info">
+                                                    <h3>Why?
+                                                    </h3>
+                                                    <p class="text-justify">We can't collect your data even if we wanted to. Cydog Search randomizes your queries and sends them to search engines that already exist. While our competitors sustain their money flow, we focus on
+                                                        innovation in the hopes you will pay for higher quality products when we monetize services in the future.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 text-center">
+                                                <img src="./resources/img/searchgraphic3.png" alt="android-3" class="img-fluid">
+                                                <div class="advancded_short_info">
+                                                    <h3>Who?
+                                                    </h3>
+                                                    <p class="text-justify">We focus on making your life easier. Our Search contains quick analytics so you can get information before you browse. We hope this empowers you.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
-            <hr class="bg-white">
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="footer_menu">
-                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="cydogtests.html">Cydog Tests</a></li>
-                        <li><a href="ourplatforms.html">Our Platforms</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="cydogconditions.html">Terms & Conditions</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <p class="text-center copyright_text">Copyright 2020</p>
-               </div>
+        </div>
+        <div class="modal modal_common fade show" id="myModal3" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document" style="background-color:#2d2d2d;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="header_title text-center">Here are Some Quick Tests</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <img src="./resources/img/close.png" class="img-fluid close_icon">
+                      </button>
+                    </div>
+                    <div class="modal-body" style="background-color:#2d2d2d; font-family:Arial;">
+                        <div class="row">
+                            <div class="col-12 text-left">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form class="add_Cookies" name="output" readonly="readonly" word-wrap="break-word;">
+                                            <b>Adblock:</b>
+                                            <input class="text-black" name="adblock" type="text" readonly="readonly"><br>
+                                            <b>Cookies:</b>
+                                            <input name="cookie" type="text" readonly="readonly">
+                                        </form>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3 class="browser_info mt-4"></h3>
+                                        <a href="ourplatforms.html">
+                                            <h4 class="our_platform_text">Try Our Browser Extensions Available in the Platforms Page!</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </footer>
-      <!---CYDOG FOOTER  -->
-</body>
-</html>
+        </div>
 
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="vendors/js/bootstrap.min.js"></script>
+    <script>
+        /*Random link button- By JavaScript Kit (http://javascriptkit.com) Over 300+ free scripts! This credit MUST stay intact for use*/
+        var randomlinks = new Array()
+        randomlinks[0] = "https://duckduckgo.com/?q="
+        randomlinks[1] = "https://search.brave.com/search?q="
+        randomlinks[2] = "https://dogpile.com/serp?q="
+        randomlinks[3] = "https://google.com/search?q="
+        randomlinks[4] = "https://search.yahoo.com/search?p="
+        randomlinks[5] = "https://bing.com/search?q="
+        randomlinks[6] = "https://www.ecosia.org/search?q="
+        randomlinks[7] = "https://www.startpage.com/do/dsearch?query="
+
+        function randomlink(link) {
+            window.location = randomlinks[Math.floor(Math.random() * randomlinks.length)] + link;
+        }
+
+        function qurySearch() {
+            const query = window.location.search
+            if (query && query.includes("?q=")) {
+                const paramList = query.split("?q=");
+                if (paramList[paramList.length - 1] !== "")
+                    randomlink(paramList[paramList.length - 1])
+            }
+        }
+        $('input').focusin(function() {
+            $('.loading').css('display', 'block');
+        });
+        $('input').focusout(function() {
+            $('.loading').css('display', 'none');
+        });
+
+        //internet is working
+        var interWorkingInfo = document.querySelector('.inter-working_info');
+        var strongText = interWorkingInfo.querySelector('strong')
+        var times = history.length;
+        var up = navigator.onLine;
+        if (up == true) {
+            var up = "Yes";
+            let internet_text = `<p>Internet is Working: <strong style="color: #15ff11;">${up}</strong></p>`
+            interWorkingInfo.innerHTML = internet_text;
+        } else {
+            var up = "No"
+            let internet_text = `<p>Internet is Working: <strong style="color: #d2c700;">${up}</strong></p>`
+            interWorkingInfo.innerHTML = internet_text;
+        }
+
+        var browser_info = document.querySelector('.browser_info');
+        browser_info.innerHTML = `<p><strong>User Agent:</strong></br></br>${navigator.userAgent}</p>`
+    </script>
+    <script>
+        // Credits: https://jonathanmh.com/how-to-detect-ad-blockers-adblock-ublock-etc/
+        window.addEventListener("load", function() {
+            let testReq = new Request(
+                "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
+                    method: "HEAD",
+                    mode: "no-cors"
+                }
+            );
+
+            fetch(testReq).then(response => {
+                document.output.adblock.value = " Not detected";
+            }).catch(error => {
+                document.output.adblock.value = " Detected";
+            });
+        });
+    </script>
+    <script>
+        if (navigator.cookieEnabled) {
+            document.output.cookie.value = " Cookies enabled";
+        } else {
+            document.output.cookie.value = " Cookies not enabled";
+        }
+    </script>
+    <!-- <script>document.body.style.overflow = 'hidden';</script> -->
+    <script>
+        function enableScroll() {
+            document.body.style.overflow = 'visible';
+            document.getElementById('aboutcydogsearch').scrollIntoView();
+        }
+    </script>
+    <script>
+        function disableScroll() {
+            document.body.style.overflow = 'hidden';
+            document.getElementById('search_engine').scrollIntoView();
+        }
+    </script>
+
+</body>
+
+</html>
 <!-- Credit for this search engine also goes to Zazz (https://stackoverflow.com/users/15160601/zazz) on StackOverflow for his guidance. It can be found here:
-https://stackoverflow.com/questions/67098879/trying-to-create-a-random-query-based-search-engine-in-javascript-but-im-stuck
-  -->
+            https://stackoverflow.com/questions/67098879/trying-to-create-a-random-query-based-search-engine-in-javascript-but-im-stuck
+              -->
