@@ -124,16 +124,35 @@ function getRandomInt(min, max) {
     return min + Math.floor(Math.random() * (max - min + 4));
 }
 
-function newsRandom(){
+function newsRandom1(){
 	
-	var cards = $(".feed-item-title a");
-	for (var i = 0; i < cards.length; i++) {
-	  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-	  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+	let cards = $("#first_ .feed-item-title a");
+	for (let i = 0; i < cards.length; i++) {
+		let target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+		let target2 = Math.floor(Math.random() * cards.length - 1) + 1;
 	  cards.eq(target1).before(cards.eq(target2));
 	};
 }
-
+function newsRandom2(){
+	
+	let cards = $("#second_ .feed-item-title a");
+	for (let i = 0; i < cards.length; i++) {
+		let target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+		let target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+	  cards.eq(target1).before(cards.eq(target2));
+	};
+}
+function newsRandom3(){
+	
+	let cards = $("#third_ .feed-item-title a");
+	for (let i = 0; i < cards.length; i++) {
+		let target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+		let target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+	  cards.eq(target1).before(cards.eq(target2));
+	};
+}
 window.addEventListener('load', function(){
-	newsRandom();
-})
+	newsRandom1();
+	newsRandom2()
+	newsRandom3();
+});

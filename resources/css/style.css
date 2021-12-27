@@ -187,7 +187,7 @@ nav .logo_link {
     display: block;
     height: 0.3rem;
     width: 0%;
-    background-color: rgb(39, 70, 235);
+    background-color: rgb(9 10 10);
     position: absolute;
     margin: -4px 0px 0px 10%;
     transition: all 250ms ease-in-out 0s;
@@ -1531,13 +1531,13 @@ nav .logo_link {
         padding: 1rem 0 2rem 0;
     }
     #cyber_news_card .top_security_head h1{
-        font-size: 2.7rem;
+        font-size: 3rem;
     }
     #cyber_news_card .card-header h3 {
         font-size: 1.8rem;
     }
     #cyber_news_card .card .card-body .news_info .feed-item-title a{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 }
 
